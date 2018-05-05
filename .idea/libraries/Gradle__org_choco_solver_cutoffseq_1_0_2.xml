@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.choco-solver:cutoffseq:1.0.2">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.choco-solver/cutoffseq/1.0.2/1028bd2e8e73e3b64a344cf3be1b9906366c1068/cutoffseq-1.0.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.choco-solver/cutoffseq/1.0.2/fe8983b23e0e8625828a0b82e8912c7ce8e27f3a/cutoffseq-1.0.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

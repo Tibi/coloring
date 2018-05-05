@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.choco-solver:choco-sat:1.0.2">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.choco-solver/choco-sat/1.0.2/4fe93b568dac6f945e83612aa3449c9419e350ed/choco-sat-1.0.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.choco-solver/choco-sat/1.0.2/664f39246efb2f204ea55fb2d18eaf855ec5b1e7/choco-sat-1.0.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

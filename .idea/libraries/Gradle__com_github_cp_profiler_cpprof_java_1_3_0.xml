@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.cp-profiler:cpprof-java:1.3.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.cp-profiler/cpprof-java/1.3.0/42f77bab064bf05e37bc8d87b10c95f02ce69636/cpprof-java-1.3.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.cp-profiler/cpprof-java/1.3.0/dbde602ef5277f000fe3c8eb8d317d04642252e5/cpprof-java-1.3.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
