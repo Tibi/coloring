@@ -1,8 +1,6 @@
 
 import org.chocosolver.solver.Model
-import org.chocosolver.solver.search.loop.monitors.IMonitorSolution
 import org.chocosolver.solver.search.strategy.Search
-import org.chocosolver.solver.search.strategy.selectors.values.IntDomainBest
 import org.chocosolver.solver.search.strategy.selectors.values.IntValueSelector
 import org.chocosolver.solver.search.strategy.selectors.variables.VariableSelector
 import org.chocosolver.solver.variables.IntVar
@@ -15,9 +13,26 @@ import java.io.File
  * @author YCHT
  */
 fun main(args: Array<String>) {
+    var fileName = "./data/gc_20_1"
+//    var fileName = "./data/gc_1000_5"
+
+    for (arg in args) {
+        if (arg.startsWith("-file=")) {
+            fileName = arg.substring(6)
+        }
+    }
 
 //    val graph = Graph("./data/gc_20_1")
-    val graph = Graph("./data/gc_1000_5")
+    val graph = Graph(fileName)
+
+    solve(graph).let {
+        val maxCol = (it.max()?:0) + 1
+        println("$maxCol 0")
+        println(it.joinToString(" ") { it.toString() })
+    }
+}
+
+fun solve(graph: Graph): List<Int> {
 
     val model = Model("Graph Coloring")
     // One int color variable for each node
@@ -41,11 +56,13 @@ fun main(args: Array<String>) {
         bestVar
     }
     val valSel = IntValueSelector { it.lb }
-    model.solver.setSearch(Search.intVarSearch(varSel, IntDomainBest(), *nodes))
+    model.solver.setSearch(Search.intVarSearch(varSel, valSel, *nodes))
 
-    model.solver.plugMonitor(IMonitorSolution { println("${maxCol.value + 1} colors") })
+//    model.solver.plugMonitor(IMonitorSolution { println("${maxCol.value + 1} colors") })
 
-    model.solver.findOptimalSolution(maxCol, false)
+//    model.solver.findOptimalSolution(maxCol, false)
+    model.solver.findSolution()
+    return nodes.map { it.value }
 }
 
 
